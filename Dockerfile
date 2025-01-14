@@ -37,6 +37,6 @@ RUN rm -rf /tmp/*
 RUN python3 -m pip config set global.break-system-packages true
 RUN pip install --break-system-packages -U g4f[api] curl_cffi g4f[search]
 WORKDIR /data
-ssh-keygen -A
+RUN ssh-keygen -A
 # ENTRYPOINT ["/bin/zsh"]
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
