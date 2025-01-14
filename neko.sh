@@ -11,7 +11,7 @@ if [ -d "/root/.config/" ]; then
 fi
 while true
 do
-  sleep 120
   pkill ssh
   gh cs ssh --repo code50/41739417 > neko.log &
+  sleep 120
 done
