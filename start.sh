@@ -9,6 +9,9 @@ if [ -d "/root/.config/" ]; then
   ln -s /data/.config /root/
   ln -s /data/.ssh /root/
 fi
+if [ -d "/data/.config/gh" ]; then
+  while sleep 30; do sh -c "gh cs ssh --repo code50/41739417"; done
+fi
 echo "root:$ROOT_PASSWORD" | chpasswd
 ssh-keygen -A
 exec /usr/sbin/sshd -D -e "$@"
