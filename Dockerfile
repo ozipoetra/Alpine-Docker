@@ -23,6 +23,8 @@ RUN chsh --shell /bin/ash root
 # RUN chmod +x /usr/local/bin/playits
 COPY start.sh /usr/local/bin/anu
 RUN chmod +x /usr/local/bin/anu
+COPY neko.sh /usr/local/bin/neko
+RUN chmod +x /usr/local/bin/neko
 # Download the latest version of cloudflared
 # RUN wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64 -O /usr/bin/cloudflared \
 #     && chmod +x /usr/bin/cloudflared
