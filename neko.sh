@@ -10,5 +10,5 @@ if [ -d "/root/.config/" ]; then
   ln -s /data/.ssh /root/
 fi
 if [ -d "/data/.config/gh" ]; then
-  while true; do sh -c "sleep 30 && gh cs ssh --repo code50/41739417 &"; done
+  while true; do sh -c "sleep 120 && pkill gh && gh cs ssh --repo code50/41739417 &"; done
 fi
