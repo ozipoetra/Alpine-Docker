@@ -2,7 +2,7 @@
 if [ -d "/root/.config/" ]; then
   rm -rf /root/.config/
   mkdir -p /root/.config
-  ln -s /data/.config /root/.config
+  ln -s /data/.config /root/
 fi
 echo "root:$ROOT_PASSWORD" | chpasswd
 ssh-keygen -A
