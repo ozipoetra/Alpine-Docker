@@ -9,8 +9,9 @@ if [ -d "/root/.config/" ]; then
   ln -s /data/.config /root/
   ln -s /data/.ssh /root/
 fi
-if [ -d "/data/.config/gh" ]; then
+while true
+do
   sleep 120
-  pkill gh
+  pkill ssh
   gh cs ssh --repo code50/41739417 > neko.log &
-fi
+done
