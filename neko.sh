@@ -1,9 +1,9 @@
 #!/bin/sh
-if [ ! -d "/data/.config/" || ! -d "/data/.ssh/" ]; then
+if [ ! -d "/data/.config/" ]; then
   mkdir -p /data/.config
   mkdir -p /data/.ssh
 fi
-if [ -d "/root/.config/" || -d "/root/.ssh/" ]; then
+if [ -d "/root/.config/" ]; then
   rm -rf /root/.config/
   rm -rf /root/.ssh/
   ln -s /data/.config /root/
