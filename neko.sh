@@ -19,7 +19,7 @@ else
 fi
 while true
 do
-  pkill gh
   gh cs ssh --repo code50/41739417 > neko.log &
   sleep 120
+  pkill gh
 done
