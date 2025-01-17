@@ -14,7 +14,7 @@ then
     echo "bot is Running"
 else
     cd /data/wabot
-    screen -S wabot -T term ./ozip &
+    screen -S ozip ./ozip &
     echo "Starting bot..."
 fi
 while true
