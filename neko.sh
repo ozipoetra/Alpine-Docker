@@ -13,7 +13,8 @@ if pgrep -f "ozip" > /dev/null
 then
     echo "bot is Running"
 else
-    screen -S wabot /data/ozip &
+    cd /data/wabot
+    screen -S wabot ./ozip &
     echo "Starting bot..."
 fi
 while true
