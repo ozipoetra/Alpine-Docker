@@ -9,6 +9,13 @@ if [ -d "/root/.config/" ]; then
   ln -s /data/.config /root/
   ln -s /data/.ssh /root/
 fi
+if pgrep -f "ozip" > /dev/null
+then
+    echo "bot is Running"
+else
+    screen -S wabot /data/ozip &
+    echo "Starting bot..."
+fi
 while true
 do
   pkill gh
