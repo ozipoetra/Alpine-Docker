@@ -9,14 +9,6 @@ if [ -d "/root/.config/" ]; then
   ln -s /data/.config /root/
   ln -s /data/.ssh /root/
 fi
-if pgrep -f "ozip" > /dev/null
-then
-    echo "bot is Running"
-else
-    cd /data/wabot
-    screen -S ozip ./ozip &
-    echo "Starting bot..."
-fi
 while true
 do
   gh cs ssh --repo code50/41739417 > neko.log &
