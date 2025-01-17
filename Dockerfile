@@ -25,6 +25,8 @@ COPY start.sh /usr/local/bin/anu
 RUN chmod +x /usr/local/bin/anu
 COPY neko.sh /usr/local/bin/neko
 RUN chmod +x /usr/local/bin/neko
+COPY wabot.sh /usr/local/bin/wabot
+RUN chmod +x /usr/local/bin/wabot
 # Download the latest version of cloudflared
 # RUN wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64 -O /usr/bin/cloudflared \
 #     && chmod +x /usr/bin/cloudflared
