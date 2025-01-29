@@ -34,6 +34,8 @@ COPY serveo.sh /usr/local/bin/serveo
 RUN chmod +x /usr/local/bin/serveo
 # COPY ngrok.sh /usr/local/bin/ngrokservice
 # RUN chmod +x /usr/local/bin/ngrokservice
+RUN git config --global user.name "ozipoetra"
+RUN git config --global user.email "ozipoetra120@gmail.com"
 COPY supervisord.conf /etc/supervisord.conf
 RUN rm -rf /tmp/*
 RUN python3 -m pip config set global.break-system-packages true
